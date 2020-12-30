@@ -29,6 +29,6 @@ Lastly, because REST APIs are not bound to deliver responses in any particular f
 
 ## Further Reading
 
-Learn REST: A RESTful Tutorial​, by Todd Friedrich
-Learn API Doc​, by Tom Preston
-Understanding SOAP and REST Basics And Differences​, by John Mueller
+1. *Learn REST: A RESTful Tutorial​*, by Todd Friedrich
+1. *Learn API Doc​*, by Tom Preston
+1. *Understanding SOAP and REST Basics And Differences​*, by John Mueller
