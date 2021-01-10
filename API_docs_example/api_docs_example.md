@@ -10,7 +10,7 @@ Returns current Bitcoin conversion rates in selected currency from the following
    
 
 |  Parameter | Required | Description | Type |  
-|---|---|---|---|---|
+|------------|----------|-------------|------|
 | {currency}  | YES  |  Target currency for bitcoin conversion. Use ISO three letter abberviations. All major currencies supported. Other currency support depends on the exchange queried. | string
 
 ---
