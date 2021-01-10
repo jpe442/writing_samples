@@ -65,12 +65,9 @@ The following array of objects is an example of the JSON response for exchange r
 
 |  Property | Description  |  
 |-----------|--------------|
-| exchange  |  The exchange site: Blockchain, Bitfinex, Btccharts, Coinbase, or Bitpay. |
-  |   
-| currency  |    The type of currency selected to be converted into from Bitcoin. All major currencies are supported in ISO three digit abbrevia- tions. Several other currencies are supported, depending on the exchange server selected. If an exchange does not accept the cur- rency type selected, the value of value is false. Except for bitpay, which returns `0` when the selected currency is unsupported.
- |   
-| value  |  The current value of bitcoin converted into the selected currency.
- |  
+| exchange  |  The exchange site: Blockchain, Bitfinex, Btccharts, Coinbase, or Bitpay. | 
+| currency  |  The type of currency selected to be converted into from Bitcoin. All major currencies are supported in ISO three digit abbrevia- tions. Several other currencies are supported, depending on the exchange server selected. If an exchange does not accept the cur- rency type selected, the value of value is false. Except for bitpay, which returns `0` when the selected currency is unsupported. |
+| value  |  The current value of bitcoin converted into the selected currency. |  
 
 ---  
 ### Sample Implementation
