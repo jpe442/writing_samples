@@ -2,8 +2,6 @@
 
 Here you will find samples of a few different sorts of industry tech writing samples I have written in the past. Some are from different product teams I worked on, some are for personal software I developed like DoDate.
 
-You can also find some of my documentation work publicly facing from my last role at Mesosphere (D2IQ) hosted on the [D2IQ Conductor documentation website](https://docs.d2iq.com/dkp/conductor/)
-
 
 1. [Rest vs SOAP APIs](https://github.com/jpe442/writing_samples/tree/main/REST_vs_SOAP_conceptual): a conceptual piece pointing out the difference between REST and SOAP protocol and APIs.
 
