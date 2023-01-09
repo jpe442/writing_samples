@@ -1,6 +1,6 @@
 # Writing Samples
 
-Here you will find samples of a few different sorts of industry tech writing samples I have written in the past. Some are from different product teams I worked on, some are for personal software I developed like DoDate, and some are from previous employment, such as the AWS Verified access docs.
+Here you will find samples of a few different sorts of industry tech docs I have written in the past. Some are from different product teams I worked on, some are for personal software I developed like DoDate,  some are from previous employment - such as the AWS Verified access docs - and some are just examples.
 
 1. [AVA_CEDAR](https://github.com/jpe442/writing_samples/tree/main/AVA_CEDAR): Technical explainer regarding how to approach using Cedar policy language with AWS Verified Access service.
 
