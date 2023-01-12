@@ -98,3 +98,4 @@ As mentioned above, when creating the context of the policy using various condit
 
 
 
+![Cedar Operators](cedar_operators.png)
