@@ -3,6 +3,8 @@ Pre-requirements
 1. An AWS account
 1. AWS cli with permissions to the AWS account
 1. An application with a load balancer in front for which to grant verified access 
+    1. the load balancer arn
+    1. dns certificate
 1. An Okta account already configured with two users and a group
 
 In this AWS Verified Access (AVA) tutorial, we will use the AWS CLI to set up an AWS Verified Access Instance (VAI) that is configured to take trust data–details regarding the security posture of the accessing user – via the Okta account we configured in section 2. We will also set up a group for our endpoint, create that endpoint, and configure it with our application’s domain and load balancer that we created in section 1.
@@ -152,10 +154,11 @@ When successful, you will see receive something like the following:
 ```
 ## Step 5: Create a Verified Access Endpoint
 
-Next we will create an endpoint associated with the group we just made. For this we will need the VAG id from the previous step’s output. You can also use aws ec2 describe-verified-access-groups to retrieve the ID.
+Next we will create an endpoint associated with the group we just made. For this we will need the VAG id from the previous step’s output. You can also use `aws ec2 describe-verified-access-groups` to retrieve the ID.
 
-AVA only supports `endpoint-type load-balancer`, so include this as the first parameter as shown below. The `attachment-type` is `vpc`. You should use the `domain-certificate-arn` you created in Section 1 of this tutorial here. The application-domain should be the URI of the application for which you are trying to set up Verified Access (see Section 1 for details) and the endpoint-domain prefix is something you create. Under load-balancer-options, you will need the arn for the load balancer for you application domain (see Section 1 for details). Finally, you need the Port to be 8080, Protocol=http, as well as the subnet information for the application domain, which you should have recorded in Section 1 of this tutorial.
+AVA only supports `endpoint-type load-balancer`, so include this as the first parameter as shown below. The `attachment-type` is `vpc`. You should use the `domain-certificate-arn` used for access to your application (see Prerequisites). The `application-domain` should be the URI of the application to which you are trying to set up Verified Access and the `endpoint-domain-prefix` is something you create. Under `load-balancer-options`, you will need the arn for the load balancer for you application domain, as pointed out in the Prerequisites. Finally, you need the `Port=8080`, `Protocol=http`, as well as the subnet information for the application domain:
 
+```
 aws ec2 create-verified-access-endpoint \
 --verified-access-group-id vagr-0edc1d7b577ebe455 \
 --endpoint-type load-balancer \
@@ -170,12 +173,12 @@ Protocol=http, \
 SubnetIds=subnet-0d6b28e56de414ccc" \
 --description "test 2022-10-14" \
 --region us-west-2
-
+```
 As with the other AVA objects, you will receive output describing the new endpoint upon successful creation.
 
-Summary and Next Section
+Summary and Next Steps
 
-We have now set up our AVA instance with an AVA group that can be secured for a group of endpoints, an AVA endpoint to be secured on its own, and an AVA trust provider attached to our instance to provide authorization to those allowed to access the application domain. 
+We have now set up our AVA instance with an AVA group that can be used to secure a group of endpoints, an AVA endpoint to be secured on its own, and an AVA trust provider attached to our instance to provide authorization to those allowed to access the application domain. 
 
-Next, in the final section of this tutorial, we will put some policy in effect so that we can access our endpoint. If we do not do this, as it is now all requests will be denied, as the policy engine that AVA relies upon denies access as a default. Once we have this policy in place, we can then test our connection using a user who should have access and one that should not.
+The next thing to do would be to set up some basic group and/or application-specific policies to ensure you can access your instance.
 
