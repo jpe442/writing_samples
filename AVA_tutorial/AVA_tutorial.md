@@ -11,6 +11,8 @@ In this AWS Verified Access (AVA) tutorial, we will use the AWS CLI to set up an
 
 A VAI is the primary AVA object, bringing together trust data from trust providers on the one hand, and accessibility to the application being secured via AVA endpoint on the other. The group and endpoint policies of the instance arbitrates access, but we won’t address policy until the next section of the tutorial. The purpose of this section of the tutorial is to set up the Verified Access Instance so that it is ready for policy. We do this by configuring the trust provider information with the endpoint information, so that the trust data can be evaluated against the policy we will put in place in the next section.
 
+![image](Image1VAI.png)
+
 ## Step 1: Create a Verified Access Instance
 
 To create a Verified Access Instance (VAI), use the following snippet as a guide:
@@ -40,7 +42,7 @@ Upon successfully creating the instance, the description of the instance is retu
 
 The next step is to create a Verified Access trust provider (VATP), so that it can be attached to the VAI we created in Step 1. An account with Okta is required for this step as specified in the prerequisites. 
 
-First, set the trust-provider-type to user since we are using an IdP like Okta and not an electronic device manager (EDM) for our trust provider. Enter anything for the policy reference name. Then enter oidc for user-trust-provider-type. You will need to get the issuer URI for `Issuer`, the `AuthorizationEndpoint`, `TokenEndpoint`, `UserInfoEndpoint`, and both `ClientID` and `ClientSecret` from your Okta account (please see prerequisites). The `Scope` should be set to `openid-profile-email`. Finally, set the `region` to the region you have been using (in this example us-west-2) and add anything that might be helpful in description. Your snippet should resemble the following once filled in with the right information from your own Okta account details:
+First, set the `trust-provider-type` to `user` since we are using an IdP like Okta and not an electronic device manager (EDM) for our trust provider. Enter anything for the policy reference name. Then enter oidc for user-trust-provider-type. You will need to get the issuer URI for `Issuer`, the `AuthorizationEndpoint`, `TokenEndpoint`, `UserInfoEndpoint`, and both `ClientID` and `ClientSecret` from your Okta account (please see prerequisites). The `Scope` should be set to `openid-profile-email`. Finally, set the `region` to the region you have been using (in this example `us-west-2`) and add anything that might be helpful in description. Your snippet should resemble the following once filled in with the right information from your own Okta account details:
 
 ```
 aws ec2 create-verified-access-trust-provider \
