@@ -187,7 +187,7 @@ SubnetIds=subnet-0d6b28e56de414ccc" \
 ```
 As with the other AVA objects, you will receive output describing the new endpoint upon successful creation.
 
-Summary and Next Steps
+## Summary and Next Steps
 
 We have now set up our AVA instance with an AVA group that can be used to secure a group of endpoints, an AVA endpoint to be secured on its own, and an AVA trust provider attached to our instance to provide authorization to those allowed to access the application domain. 
 
