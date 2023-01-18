@@ -1,5 +1,5 @@
 # Set up your AWS Verified Access Instance
-Pre-requirements
+## Pre-requirements
 1. An AWS account
 1. AWS cli with permissions to the AWS account
 1. An application with a load balancer in front for which to grant verified access 
@@ -7,17 +7,24 @@ Pre-requirements
     1. dns certificate
 1. An Okta account already configured with two users and a group
 
-In this AWS Verified Access (AVA) tutorial, we will use the AWS CLI to set up an AWS Verified Access Instance (VAI) that is configured to take trust data–details regarding the security posture of the accessing user (see Pre-requirements). We will also set up a group for our endpoint, create that endpoint, and configure it with our application’s domain and load balancer (see Pre-requirements).
+## Introduction 
 
-AWS Verified Access is an AWS managed service that enables enterprises to provide VPN-less secure network access to corporate applications, improve their security, and simplify their end-users’ experience. IT administrators can use AVA to build a unified set of fine-grained policies that define their users’ ability to access each of their applications. AVA verifies each access request in real-time and only connects users to the applications they are allowed to access. This eliminates broad access to corporate applications. For example, using AVA, administrators can define a policy to let only employees on the finance team, who are also using a device with malware protection enabled, access core financial applications. AVA utilizes a powerful policy language, Cedar , to enable enterprises to quickly create policy documents that secure access to their applications from any location and any network.
+AWS Verified Access is an AWS managed service that enables enterprises to provide VPN-less secure network access to corporate applications, improve their security, and simplify their end-users’ experience. IT administrators can use AVA to build a unified set of fine-grained policies that define their users’ ability to access each of their applications. AVA verifies each access request in real-time and only connects users to the applications they are allowed to access. This eliminates broad access to corporate applications. For example, using AVA, administrators can define a policy to let only employees on the finance team, who are also using a device with malware protection enabled, access core financial applications. AVA utilizes a powerful policy language, Cedar, to enable enterprises to quickly create policy documents that secure access to their applications from any location and any network.
 
-A VAI is the primary AVA object, bringing together trust data from trust providers on the one hand, and accessibility to the application being secured via AVA endpoint on the other. The group and endpoint policies of the instance arbitrates access, but we won’t address policy until the next section of the tutorial. The purpose of this section of the tutorial is to set up the Verified Access Instance so that it is ready for policy. We do this by configuring the trust provider information with the endpoint information, so that the trust data can be evaluated against the policy we will put in place in the next section.
+In this AWS Verified Access (AVA) tutorial, we will use the AWS CLI to set up an AWS Verified Access Instance (VAI) that is configured to take trust data–details from Okta regarding the security posture of the accessing user (see Pre-requirements). We will also set up a group for our endpoint, create that endpoint, and cosnfigure it with our application’s domain and load balancer (see Pre-requirements).
+
+
+A VAI is the primary AVA object, bringing together trust data from trust providers on the one hand, and accessibility to the application being secured via AVA endpoint on the other. The group and endpoint policies of the instance arbitrates access, but we won’t address policy in this tutorial. The purpose of this tutorial is to set up the Verified Access Instance so that it is ready for policy. We do this by configuring the trust provider information with the endpoint information, so that the trust data can be evaluated against a policy (out of scope for this tutorial).
+
+The completed tutorial achieves the following architecture:
 
 ![image](Image1VAI.png)
 
+In this diagram, we see the VAI connected to the IDP via the attached Verified Access Trust Provider VATP, the Verified Access Group as part of the VAI, and the Verified Access Endpoint (VAE) as a member of the Verified Access Group (VAG), which is also responsible for connecting the VAI to the application we are trying to secure. Esssentially, instead of accessing the application via authenticating through the IDP alone as in a typical VPN-less situation, users must get be granted authorization from the Verified Access Instance as well.
+
 ## Step 1: Create a Verified Access Instance
 
-To create a Verified Access Instance (VAI), use the following snippet as a guide:
+To create a Verified Access Instance, use the following snippet as a guide:
 
 ````
 aws ec2 create-verified-access-instance \
