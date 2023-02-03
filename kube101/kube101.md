@@ -1,4 +1,4 @@
-# Kubes for Noobs: An Introduction to Kubernetes
+# Kubernetes 101: An Introduction to Kubernetes
 
 ## Overview
 
