@@ -6,6 +6,9 @@ The main purpose for this guide is to show someone new to the Jira tool and spri
 
 * Access to a Jira account in which you have sufficient permissions to create projects and sprints
 
+* Some familiarity with the basics of project management 
+  * [Click here](https://projectmanagment101.com) to read a basics guide on project management
+
 ## How JIRA helps organize and track the execution of tasks
 
 Jira is a tool that is used to organize and track the execution of many discrete tasks, *which in Jira are called 'issues'*. This can be helpful for accomplishing larger goals and projects, as most projects can be broken down further into many issues. If all of the necessary issues for a project are complete, we know the project as a whole is complete. Therefore, breaking a project down issue-by-issue makes the job of managing that project more tractable because we can more easily check how much work has already been done on the project, as well as how much is still left. This, in turn, can make both planning the project as well as tracking and reporting on the status of the project much easier. 
@@ -146,4 +149,6 @@ The Complete sprint modal that pops up is the last step in completing a sprint. 
  ![`Complete Sprint` modal screenshot](screenshots/completeSprintFinal2.png "`Complete Sprint` modal")
 
 You will be returned to the `Backlog` tab. Your sprint is now complete.
+
+After some initial context regarding how Jira organizes and tracks issues, we then walked through how to create a sprint from scratch by creating a new project first. Then we walked through how to create a sprint in the new project, populate that sprint with new issues from the backlog, start the newly populated sprint, and finally we walked through how to complete the sprint. You now should have the knowledge to organize and track the execution of your project's issues by creating your own sprints as you find them needed.
 
