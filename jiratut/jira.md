@@ -1,22 +1,22 @@
 # How to create, populate, start, and complete a sprint in Jira
 
-This main purpose for this guide is to show someone new to the Jira tool and sprints, how to create, populate, start, and complete a sprint in Jira. To that end, the guide is divided into two main parts: one informational part first, providing the context for why we would want to use Jira or sprints for project management, and second, a step-by-step walkthrough to demonstrate exactly what you have to do to create, populate, start, and then finally complete a sprint using the Jira tool.
+The main purpose for this guide is to show someone new to the Jira tool and sprints, how to create, populate, start, and complete a sprint in Jira. To that end, the guide is divided into two main parts: one informational part first, providing the context for why we would want to use Jira or sprints for project management, and second, a step-by-step walkthrough to demonstrate exactly what you have to do to create, populate, start, and then finally complete a sprint using the Jira tool.
 
 ## Prerequisites
 
-* Access to a Jira account in which you have permissions to create sprints
+* Access to a Jira account in which you have sufficient permissions to create projects and sprints
 
 ## How JIRA helps organize and track the execution of tasks
 
-Jira is a tool that is used to organize and track the execution of many discrete tasks, *which in Jira are called 'issues'*. This can be helpful for accomplishing larger goals and projects, as most projects can be broken down further into many issues. If all of the necessary issues for a project are complete, we know the project as a whole is complete. Therefore, breaking a project down issue-by-issue makes the job of managing that project more tractable because we can more easily check how much work has already been done on the project, as well as how much is still left. This, in turn, can make both planning the project and reporting on the status of the project much easier. 
+Jira is a tool that is used to organize and track the execution of many discrete tasks, *which in Jira are called 'issues'*. This can be helpful for accomplishing larger goals and projects, as most projects can be broken down further into many issues. If all of the necessary issues for a project are complete, we know the project as a whole is complete. Therefore, breaking a project down issue-by-issue makes the job of managing that project more tractable because we can more easily check how much work has already been done on the project, as well as how much is still left. This, in turn, can make both planning the project as well as tracking and reporting on the status of the project much easier. 
 
 ### Jira for task organization
 
-In Jira, tasks are first organized by the Jira project to which they belong. A project is highest level of project organization. Each project has a roadmap to further organize issues at a high level. The roadmap is the top-down view of all the issues essential to the project. For example, suppose our project was 'Moving' - to track the the project of moving homes from one place to another. Then, we would have a roadmap where we could further organize our move into large key junks of work called 'epics'. In the case of our 'Moving' project, we could break it down further: an epic for packing up my office named 'Pack Office', another one for packing the bedroom named 'Pack Bedroom', and so on. All the epics together would then constitute the roadmap and could each in turn be broken down further into different issues, such as 'Prepare Boxes', 'Pack Desk' and 'Pack Closet'. 
+In Jira, tasks are first organized by the Jira project to which they belong. A project in Jira is the highest level of issue organization. Each project has a roadmap to further organize issues at a high level. The roadmap is the top-down view of all the issues essential to the project. For example, suppose our project was 'Moving' - to track the project of moving homes from one place to another. Then, we would have a roadmap where we could further organize our move into large key junks of work called 'epics'. In the case of our 'Moving' project, we could break it down further: an epic for packing up my office named 'Pack Office', another one for packing the bedroom named 'Pack Bedroom', and so on. All the epics together would then constitute the roadmap and could each in turn be broken down further into different issues, such as 'Prepare Boxes', 'Pack Desk' and 'Pack Closet'. 
 
 ### Sprints in Jira for tracking task execution
 
-In addition to a roadmap, each Jira project also has a backlog, which organizes tasks differently than the project's roadmap. The roadmap is top-down oriented and heirarchically organized in terms of epics first, then the issues of those epics. The backlog more focuses more on the issues that make up the epics, as well as issues that don't have an epic. This is because we use the backlog to package up sets of issues for the purposes of how we actually want to execute those issues, and this could look much different than how issues are organized on the roadmap. For instance, returning to our example of moving our house, we may not want to complete all the issues associated with the epic 'Pack Office' before moving onto the issues of the epic 'Pack Bedroom'. 
+In addition to a roadmap, each Jira project also has a backlog, which organizes tasks differently than the project's roadmap. The roadmap is top-down oriented and hierarchically organized in terms of epics at top, then the issues of those epics listed under them. The backlog focuses more on the issues that make up the epics, as well as issues that don't have an epic. This is because we use the backlog to package up sets of issues for the purposes of how we actually want to execute those issues, and this could look much different than how issues are organized on the roadmap. For instance, returning to our example of moving our house, we may not want to complete all the issues associated with the epic 'Pack Office' before moving onto the issues of the epic 'Pack Bedroom'. 
 
 Packaging up tasks from the backlog into just those tasks we want to in one time-period is what sprints in Jira are for. Sprints are time-bounded periods wherein you want to accomplish a set of discrete issues. Suppose we wanted to do the 'Prepare Boxes' issue for packing our bedroom and the 'Prepare Boxes' issue for packing our office on the same day before moving onto any of the other tasks for packing our bedroom or office. To accomplish this, we could implement a one-day sprint in Jira with just the two items included: 'Prepare Boxes' for the bedroom and 'Prepare Boxes' for the office. This gives us the flexibility to package up issues differently each time we want to take on some work. Maybe next we want to do a three-day sprint and finish up all the rest of the issues associated with packing up just the office.
 
@@ -34,7 +34,7 @@ First, to create a new sprint in Jira, let's start with a new project.
 
  ![Create Project screenshot](screenshots/createProject3.png "Create Project")
 
-2. Next, you will be presented with the `Project templates` page, where you can configure the project to your specifications. For this walkthrough, select the `Software Development` option in the top-left corner and then the `Scrum` option in the between `Kanban` and `Bug Tracking`. The `Scrum` option is what will allow us to create a Sprint once we have our new project.
+2. Next, you will be presented with the `Project templates` page, where you can configure the project to your specifications. For this walkthrough, select the `Software Development` option in the top-left corner and then the `Scrum` option in between `Kanban` and `Bug Tracking`. The `Scrum` option is what will allow us to create a Sprint once we have our new project.
 
  ![Project templates screenshot](screenshots/projectTemplates2.png "Configure your Project's template")
 
@@ -42,7 +42,7 @@ This will then show you a scrum information view, which explains the main featur
 
  ![Scrum features screenshot](screenshots/scrum2.png "The Scrum template")
 
-3. For this step, you will choose a project type. for the purposes of this walkthrough, we will select team-managed project instead of company-managed.
+3. For this step, you will choose a project type. for the purposes of this walkthrough, we will select the team-managed project option instead of company-managed.
 
  ![Team-managed screenshot](screenshots/teamManaged2.png "Select team-managed project type")
 
@@ -56,7 +56,7 @@ This will land you on your new project's `Board` view, which should be empty due
 
 #### How to create a sprint from the backlog
 
-Now that we have a sprint, we can create a sprint from the backlog.
+Now that we have a project, we can create a sprint from the backlog.
 
 1. First, on the left vertical menu, select the `Backlog` tab, which will take you to the backlog for your newly created project. 
 
@@ -131,7 +131,7 @@ Once complete, you will be presented with the new sprint on the `Board` tab of t
 
  ![New sprint board screenshot](screenshots/newSprintBoard3.png "New sprint board")
 
-3. Let's go ahead and move our 'Add me to sprint!' issue to the `DONE` column, since we have already successfully added the issue to the sprint. Now all current issues in the sprint are complete. Usually issues do not go straight from the `TO DO` column to the `DONE` and instead go to the `IN PROGRESS` column while being worked on. In this case we needed only add the issue to sprint, so we are done with that issue. 
+3. Let's go ahead and move our 'Add me to sprint!' issue to the `DONE` column, since we have already successfully added the issue to the sprint. Now all current issues in the sprint are complete. Usually issues do not go straight from the `TO DO` column to the `DONE` and instead go to the `IN PROGRESS` column while being worked on. In this case we needed only to add the issue to the sprint, so we are done with that issue. 
 
  ![Issue in `DONE` column screenshot](screenshots/issuesDone2.png "All issues in `DONE`")
 
