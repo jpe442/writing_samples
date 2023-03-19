@@ -1,4 +1,6 @@
-# How to create, populate, and start a Sprint in Jira
+# How to create, populate, start, and complete a sprint in Jira
+
+This main purpose for this guide is to show someone new to the Jira tool and sprints, how to create, populate, start, and complete a sprint in Jira. To that end, the guide is divided into two main parts: one informational part first, providing the context for why we would want to use Jira or sprints for project management, and second, a step-by-step walkthrough to demonstrate exactly what you have to do to create, populate, start, and then finally complete a sprint using the Jira tool.
 
 ## Prerequisites
 
@@ -16,17 +18,17 @@ In Jira, tasks are first organized by the Jira project to which they belong. A p
 
 In addition to a roadmap, each Jira project also has a backlog, which organizes tasks differently than the project's roadmap. The roadmap is top-down oriented and heirarchically organized in terms of epics first, then the issues of those epics. The backlog more focuses more on the issues that make up the epics, as well as issues that don't have an epic. This is because we use the backlog to package up sets of issues for the purposes of how we actually want to execute those issues, and this could look much different than how issues are organized on the roadmap. For instance, returning to our example of moving our house, we may not want to complete all the issues associated with the epic 'Pack Office' before moving onto the issues of the epic 'Pack Bedroom'. 
 
-Packaging up tasks from the backlog into just those tasks we want to in one time-period is what sprints in Jira are for. Sprints are time-bounded periods wherein you want to accomplish a set of discrete issues. Suppose we wanted to do the 'Prepare Boxes' issue for packing our bedroom and the 'Prepare Boxes' issue for packing our office on the same day before moving onto any of the other tasks for packing our bedroom or office. To accomplish this, we could implement a one-day sprint in Jira with just the two items included: 'Prepare Boxes' for the bedroom and 'Prepare Boxes' for the office. This gives us the flexibility to package up issues differently each time we want to take on some work. Maybe next we want to do a three-day Sprint and finish up all the rest of the issues associated with packing up just the office.
+Packaging up tasks from the backlog into just those tasks we want to in one time-period is what sprints in Jira are for. Sprints are time-bounded periods wherein you want to accomplish a set of discrete issues. Suppose we wanted to do the 'Prepare Boxes' issue for packing our bedroom and the 'Prepare Boxes' issue for packing our office on the same day before moving onto any of the other tasks for packing our bedroom or office. To accomplish this, we could implement a one-day sprint in Jira with just the two items included: 'Prepare Boxes' for the bedroom and 'Prepare Boxes' for the office. This gives us the flexibility to package up issues differently each time we want to take on some work. Maybe next we want to do a three-day sprint and finish up all the rest of the issues associated with packing up just the office.
 
 ## Walking through creating, populating, starting, and completing a sprint in Jira
 
-Now that we have talked about some of the Jira helps with the issue organization and issue tracking to set some context, in what follows we will walk through the steps entailed for actually creating a sprint from scratch, populating that sprint with issues, and finally starting and then completing the sprint.
+Now that we have talked about some of how Jira helps with the issue organization and issue tracking to set some context, in what follows we will walk through the steps entailed for actually creating a sprint from scratch, populating that sprint with issues, starting the sprint, and then finally completing the sprint.
 
 ### How to create a sprint in Jira
 
-#### How to create a new Jira project
+First, to create a new sprint in Jira, let's start with a new project. 
 
-First, to create a new sprint in Jira, let's start with a new project.
+#### How to create a new Jira project
 
 1.  To create the Jira project in which you want to create a new sprint, first select the `Create project` option from the `Projects` dropdown in the navigation bar at the top of the screen. 
 
@@ -113,11 +115,11 @@ You can change this to a Task issue type or a Bug issue type by using the dropdo
 
  ![Add issue from backlog to sprint screenshot](screenshots/addToSprint2.png "Add issue from backlog to sprint")
 
-Now your sprint contains at least one issue and can be started. Usually you would not start a sprint with just one issue, but for the purposes of this walkthrough, it is sufficient.
+Now your sprint contains at least one issue and can be started. Now usually you would not start a sprint with just one issue, but for the purposes of this walkthrough, it is sufficient.
 
 ### How to start and complete a sprint in JIRA
 
-1. To start the Sprint you have just populated, first click the `Start Sprint` button of the Sprint.
+1. To start the Sprint you have just populated, first click the `Start Sprint` button of the sprint.
 
  ![`Start Sprint` button screenshot](screenshots/startSprintButton2.png "`Start Sprint` button")
 
