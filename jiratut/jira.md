@@ -6,8 +6,7 @@ The main purpose for this guide is to show someone new to the Jira tool and spri
 
 * Access to a Jira account in which you have sufficient permissions to create projects and sprints
 
-* Some familiarity with the basics of project management 
-  * [Click here](https://projectmanagment101.com) to read a basics guide on project management
+* Some familiarity with the [basics of project management](https://projectmanagment101.com)
 
 ## How JIRA helps organize and track the execution of tasks
 
